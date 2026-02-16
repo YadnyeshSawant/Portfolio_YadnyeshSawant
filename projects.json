@@ -1,0 +1,59 @@
+[
+  {
+    "id": "book-n-joy",
+    "title": "BOOK-n-JOY: Event Ticket Booking Platform",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDfUWCyHnBHCF9744cmQM5qF4QTdRCj9-W0CeiCcGCjBLhXmVsXlgf9eilpJ9NWniQlcshMv0d_COWEsYVa4_SgptYb8IrBQ5nhke7UqSW6gjAeDjyQQzEPUKZZk1PlB-9z4w7-Tlf2kge-HHLEJ7Jf195BvctZ7FFOGGLJIorXow6iDKj9AmX2nPKfxISrydFuVoG8raP2eQ5y0SQXR6f0NHi-yumQ-EMEgUSXaQgq1VZlLRUHl9z09bD4dY2G4BQkT4s3k1I9qv5X",
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Bootstrap",
+      "JavaScript",
+      "Git"
+    ],
+    "description": "A full-stack event ticket booking platform that allows users to browse events, book tickets, and manage bookings with secure authentication and database integration.",
+    "role": "Full Stack Developer",
+    "timeline": "3 Months",
+    "status": "Completed",
+    "liveDemo": "#",
+    "sourceCode": "#"
+  },
+  {
+    "id": "python-executor",
+    "title": "Python Program Executor with Version Control Implementation",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAlspEyrrAhZtS4I5u7HBQT-t9glQ8mLtROnVpiHPlAMu4zupVdi7S1LGBQ1BxcG3MJzlNyJ562w4XJhuTHZQ8LN0i34O_zev_klo8ipCd6PwPc3D8sZhcvswCaYr9r1EzV7q7ecrArsIAbwDbmbIkqfAzJxDNzMv_VvRaqajYQh9qr4r44LGYVg32N9xWc-wDzcmWJF8PogLcgL5ipuj50KxFrwz6wFCN7XFL_rKyoWMe-cwr-xtsygNQiXx25DWdmQ6HKNi8-eIMv",
+    "technologies": [
+      "Java",
+      "Swing",
+      "Git",
+      "Maven",
+      "Python",
+      "Git Bash"
+    ],
+    "description": "A desktop application that allows users to execute Python programs and manage versions using integrated Git version control features.",
+    "role": "Java Developer",
+    "timeline": "2 Months",
+    "status": "Completed",
+    "liveDemo": "#",
+    "sourceCode": "#"
+  },
+  {
+    "id": "codelabs",
+    "title": "CodeLabs: Code Testing Application",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDex-OFspX5h26_2iT6qTNt4kXTYm9w5sKwd7tylM50M7b0EMOxnZQ1IQYwfIER-Z8YQfpZt6-Wtchnilvq76116pHJM6ehQGVBbkue6Hf2cNM4gvrUIZjcPu7v0eX4CbM9OoHawJqhLJD9-29uHCWhnVMbGtLg5EvtFU54ra3wOUjKEddxAJ93hpjsk6SyKtamSCboj7y6V7ZWIf1AmJU1sj8N-TuLHY85dY9pvOvuoPtzwfudaSZX4-n00xtZvNtE8FVntV_anFj5",
+    "technologies": [
+      "Java",
+      "Swing",
+      "Git",
+      "Maven",
+      "Socket Programming",
+      "Client-Server"
+    ],
+    "description": "A client-server based code testing platform using socket programming to allow remote execution and testing of programs.",
+    "role": "Backend Developer",
+    "timeline": "2 Months",
+    "status": "Completed",
+    "liveDemo": "#",
+    "sourceCode": "https://github.com/YadnyeshSawant/CodingTestApp"
+  }
+]
