@@ -12,11 +12,11 @@
       "Git"
     ],
     "description": "A full-stack event ticket booking platform that allows users to browse events, book tickets, and manage bookings with secure authentication and database integration.",
-    "role": "Full Stack Developer",
+    "role": "Backend Developer",
     "timeline": "3 Months",
     "status": "Completed",
     "liveDemo": "#",
-    "sourceCode": "#"
+    "sourceCode": "https://github.com/theujwalthakare/aaomile"
   },
   {
     "id": "python-executor",
