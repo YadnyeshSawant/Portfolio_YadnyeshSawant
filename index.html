@@ -18,7 +18,6 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
-
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -42,7 +41,6 @@
         },
       };
     </script>
-    <script src="script.js"></script>
     <style>
       body {
         font-family: "Inter", sans-serif;
@@ -52,6 +50,24 @@
         background-image: radial-gradient(#258cf415 1px, transparent 1px);
         background-size: 30px 30px;
       }
+      .typewriter-cursor::after {
+        content: "|";
+        animation: blink 1s infinite;
+        margin-left: 5px;
+      }
+
+      @keyframes blink {
+        0%,
+        50%,
+        100% {
+          opacity: 1;
+        }
+        25%,
+        75% {
+          opacity: 0;
+        }
+      }
+      
     </style>
   </head>
   <body
@@ -70,8 +86,8 @@
           <div class="z-10">
             <!-- Your Name -->
             <h2 class="text-2xl md:text-2xl mb-2">Hello, I'm</h2>
-            <h2 class="text-4xl md:text-5xl font-black mb-4">
-              Yadnyesh Sawant
+            <h2 class="text-4xl md:text-5xl font-black mb-4 whitespace-nowrap">
+              <span id="typewriter-name" class="typewriter-cursor"></span>
             </h2>
 
             <!-- Role -->
@@ -109,17 +125,17 @@
           </div>
 
           <!-- Image -->
-          <div class="relative hidden lg:block">
+          <div class="relative order-first lg:order-last mb-10 lg:mb-0">
             <div
-              class="absolute -top-20 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-[100px]"
+              class="absolute -top-10 -right-10 w-72 h-72 lg:w-96 lg:h-96 bg-primary/20 rounded-full blur-[100px]"
             ></div>
 
             <div
-              class="relative z-10 rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-sm p-4 overflow-hidden shadow-2xl"
+              class="relative z-10 rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-sm p-3 lg:p-4 overflow-hidden shadow-2xl max-w-xs sm:max-w-sm lg:max-w-md mx-auto"
             >
               <img
                 alt="Yadnyesh Sawant"
-                class="rounded-lg opacity-80"
+                class="rounded-lg opacity-90 w-full h-auto object-cover"
                 src="profileImage.jpeg"
               />
             </div>
@@ -212,8 +228,10 @@
                     </p>
 
                     <p class="text-slate-600 dark:text-slate-400">
-                      Currently pursuing MCA with specialization in Full-Stack
-                      Development, Java, Spring Boot, and backend system design.
+                      Currently pursuing MCA, specializing in Full-Stack
+                      Development, Java, and Spring Boot, with a strong focus on
+                      backend system design, and secured an
+                      <strong>SGPA of 8.04</strong> in the first semester.
                     </p>
 
                     <p
@@ -226,7 +244,7 @@
                   <!-- BSc -->
                   <div class="relative pl-8 border-l-2 border-primary/20">
                     <div
-                      class="absolute -left-[9px] top-0 size-4 rounded-full bg-primary"
+                      class="absolute -left-[9px] top-0 size-4 rounded-full bg-slate-300 dark:bg-slate-600"
                     ></div>
 
                     <h4
@@ -240,9 +258,9 @@
                     </p>
 
                     <p class="text-slate-600 dark:text-slate-400">
-                      Graduated with CGPA 8.42. Focused on Java programming,
-                      database systems, software engineering, and full-stack
-                      development fundamentals.
+                      Graduated with <strong>CGPA 8.42</strong>. Focused on Java
+                      programming, database systems, software engineering, and
+                      full-stack development fundamentals.
                     </p>
 
                     <p
@@ -255,7 +273,7 @@
                   <!-- HSC -->
                   <div class="relative pl-8 border-l-2 border-primary/20">
                     <div
-                      class="absolute -left-[9px] top-0 size-4 rounded-full bg-primary/60"
+                      class="absolute -left-[9px] top-0 size-4 rounded-full bg-slate-300 dark:bg-slate-600"
                     ></div>
 
                     <h4
@@ -304,7 +322,7 @@
                     <p
                       class="text-sm font-bold text-slate-400 dark:text-slate-500 mt-2 tracking-wider uppercase"
                     >
-                      2010 – 2020
+                      2010 - 2020
                     </p>
                   </div>
                 </div>
@@ -673,6 +691,7 @@
           </div>
         </div>
       </section>
+      <!-- Leadership Section -->
       <section class="py-24 bg-slate-50 dark:bg-slate-900/30" id="experience">
         <div class="max-w-7xl mx-auto px-6">
           <div class="text-center mb-16">
@@ -687,81 +706,10 @@
               Extracurricular Activities
             </h3>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Leadership Item 1 -->
-            <div
-              class="flex flex-col p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                  >groups</span
-                >
-              </div>
-              <h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">
-                Event Coordinator - Agile Methodology Guest Lecture & Workshop
-                MIT World Peace University, Pune
-              </h4>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                Coordinated with faculty and student teams to organize and
-                manage an Agile Methodology workshop led by industry expert Mr.
-                Mukkesh Shanmugam. Assisted in event planning, logistics, and
-                execution, ensuring smooth coordination and successful delivery.
-                Gained practical exposure to Agile principles, Scrum practices,
-                and real-world software development workflows.
-              </p>
-            </div>
-            <!-- Leadership Item 2 -->
-            <div
-              class="flex flex-col p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                  >psychology</span
-                >
-              </div>
-              <h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">
-                Event Coordinator – Next-Gen AI Tools for Data, Design &
-                Workflow Workshop MIT World Peace University, Pune 2025
-              </h4>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                Coordinated with faculty and student teams to organize a
-                workshop on modern no-code AI tools led by Prof. (Dr.) Abhijit
-                Tarawade. Assisted in event planning, logistics, and execution
-                while gaining exposure to AI platforms such as Google Opal and
-                Napkin AI, and their applications in workflow automation, data
-                processing, and AI-driven development.
-              </p>
-            </div>
-            <!-- Leadership Item 3 -->
-            <div
-              class="flex flex-col p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                  >psychology</span
-                >
-              </div>
-              <h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">
-                Stage & Discipline Committee Member - Spandan Cultural Fest MIT
-                World Peace University, 2026
-              </h4>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                Managed stage coordination, ensured discipline, and assisted in
-                smooth execution of university-level cultural events.
-                Collaborated with event teams and performers to maintain
-                organized event flow and logistics.
-              </p>
-            </div>
-          </div>
+          <div
+            id="leadership-container"
+            class="grid grid-cols-1 md:grid-cols-2 gap-8"
+          ></div>
         </div>
       </section>
       <!-- Contact Section -->
@@ -790,7 +738,9 @@
                   >
                     <span class="material-symbols-outlined">mail</span>
                   </div>
-                  <span class="font-medium">hello@devportfolio.com</span>
+                  <a href="mailto:yadnyesh2018@gmail.com" class="font-medium"
+                    >yadnyesh2018@gmail.com</a
+                  >
                 </div>
                 <div class="flex items-center gap-4">
                   <div
@@ -799,8 +749,16 @@
                     <span class="material-symbols-outlined">location_on</span>
                   </div>
                   <span class="font-medium" data-location="San Francisco, CA"
-                    >San Francisco, CA</span
+                    >Pune Maharashtra, India</span
                   >
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="size-10 bg-primary/10 rounded-full flex items-center justify-center text-primary"
+                  >
+                    <span class="material-symbols-outlined"> commit </span>
+                  </div>
+                  <a href="https://github.com/YadnyeshSawant">github.com/YadnyeshSawant</a>
                 </div>
               </div>
             </div>
@@ -905,5 +863,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

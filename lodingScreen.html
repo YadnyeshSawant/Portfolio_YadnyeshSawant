@@ -1,0 +1,173 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Under Development | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#258cf4",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .glow-effect {
+        box-shadow: 0 0 40px 10px rgba(37, 140, 244, 0.15);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <!-- Navigation Header -->
+      <!-- <header
+        class="flex items-center justify-between px-6 md:px-20 py-6 w-full absolute top-0 z-10"
+      >
+        <div class="flex items-center gap-2 text-primary">
+          <div
+            class="size-8 bg-primary/10 rounded-lg flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-primary text-[24px]"
+              >terminal</span
+            >
+          </div>
+          <h2
+            class="text-slate-900 dark:text-white text-lg font-bold tracking-tight"
+          >
+            Portfolio
+          </h2>
+        </div>
+        <div class="flex items-center gap-4">
+          <button
+            class="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white hover:bg-primary/20 transition-all"
+          >
+            <span class="material-symbols-outlined text-[20px]"
+              >light_mode</span
+            >
+          </button>
+        </div>
+      </header> -->
+      <!-- Main Content Area -->
+      <main
+        class="flex flex-1 flex-col items-center justify-center px-6 py-20 text-center relative"
+      >
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"
+          ></div>
+          <div
+            class="absolute inset-0 bg-[radial-gradient(#258cf4_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.03]"
+          ></div>
+        </div>
+        <!-- Content Container -->
+        <div class="z-10 max-w-2xl w-full flex flex-col items-center">
+          <!-- Status Badge -->
+          <!-- <div class="mb-8 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 border border-primary/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-xs font-bold tracking-widest uppercase text-primary">Work in Progress</span>
+</div> -->
+          <!-- Main Animated Icon -->
+          <div class="relative mb-10">
+            <div
+              class="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl"
+            ></div>
+            <!-- <div
+              class="relative flex items-center justify-center size-24 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-white/10 shadow-xl"
+            >
+              <span class="material-symbols-outlined text-[48px] text-primary"
+                >construction</span
+              >
+            </div> -->
+          </div>
+          <!-- Text Content -->
+          <h1
+            class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6"
+          >
+            Feature Under <span class="text-primary">Development</span>
+          </h1>
+          <p
+            class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-10 max-w-md mx-auto"
+          >
+            I'm currently building something great here. I'm refining this
+            section to ensure the best experience. Check back soon for the full
+            reveal!
+          </p>
+          <!-- Progress Indicator -->
+          <div class="w-full max-w-sm mb-12">
+            <div class="flex justify-between items-end mb-3">
+              <span
+                class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+                >Build Progress</span
+              >
+              <span class="text-sm font-bold text-primary">65%</span>
+            </div>
+            <div
+              class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden"
+            >
+              <div
+                class="h-full bg-primary rounded-full transition-all duration-1000"
+                style="width: 65%"
+              ></div>
+            </div>
+          </div>
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+            <a
+              href="index.html"
+              class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all active:scale-95"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >arrow_back</span
+              >
+              Back to Home
+            </a>
+            <!-- <button class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 dark:border-white/10 bg-white/5 px-8 py-3.5 text-sm font-bold text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+                        Notify Me
+                    </button> -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
