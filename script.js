@@ -3,7 +3,34 @@ function loadNavbar() {
   fetch("navbar.html")
     .then((response) => response.text())
     .then((data) => {
+
       document.getElementById("navbar-container").innerHTML = data;
+
+      // ✅ hamburger toggle logic
+      const hamburger = document.getElementById("hamburger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (hamburger && mobileMenu) {
+
+        hamburger.addEventListener("click", () => {
+
+          mobileMenu.classList.toggle("hidden");
+
+        });
+
+        // optional: close menu when clicking link
+        document.querySelectorAll("#mobile-menu a").forEach(link => {
+
+          link.addEventListener("click", () => {
+
+            mobileMenu.classList.add("hidden");
+
+          });
+
+        });
+
+      }
+
     });
 }
 

@@ -1,0 +1,70 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+.hero-pattern {
+  background-color: #101922;
+  background-image: radial-gradient(#258cf415 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+.typewriter-cursor::after {
+  content: "|";
+  animation: blink 1s infinite;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+.skill-rect {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  transition: all 0.25s ease;
+}
+
+.dark .skill-rect {
+  background: rgba(30,41,59,0.4);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.skill-rect:hover {
+  transform: translateY(-3px);
+  border-color: #258cf4;
+}
+
+.skill-logo {
+  font-size: 26px;
+  color: #258cf4;
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 16px;
+}

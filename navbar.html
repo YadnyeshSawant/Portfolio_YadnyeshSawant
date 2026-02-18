@@ -2,53 +2,90 @@
   class="fixed top-0 w-full z-50 border-b border-white/5 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
 >
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="index.html"
-      ><div class="flex items-center gap-2">
+    <!-- Logo -->
+    <a href="index.html">
+      <div class="flex items-center gap-2">
         <div class="size-8 rounded flex items-center justify-center">
-          <!-- <span class="material-symbols-outlined text-white">code</span> -->
-          <span class="material-symbols-outlined"> person </span>
+          <span class="material-symbols-outlined">person</span>
         </div>
+
         <span
           class="text-xl font-bold tracking-tight text-slate-900 dark:text-white"
-          >Yadnyesh Sawant</span
         >
-      </div></a>
+          Yadnyesh Sawant
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Menu -->
     <nav class="hidden md:flex items-center gap-8">
       <a
         class="text-sm font-medium hover:text-primary transition-colors"
         href="#about"
-        >About</a
       >
+        About
+      </a>
+
       <a
         class="text-sm font-medium hover:text-primary transition-colors"
         href="#projects"
-        >Projects</a
       >
+        Projects
+      </a>
+
       <a
         class="text-sm font-medium hover:text-primary transition-colors"
         href="#skills"
-        >Skills</a
       >
+        Skills
+      </a>
+
       <a
         class="text-sm font-medium hover:text-primary transition-colors"
         href="#experience"
-        >Leadership</a
       >
+        Leadership
+      </a>
+
       <a
         class="text-sm font-medium hover:text-primary transition-colors"
         href="#contact"
-        >Contact</a
       >
-      <a href="Yadnyesh_Resume.pdf" target="_blank"
-        ><button
+        Contact
+      </a>
+
+      <a href="Yadnyesh_Resume.pdf" target="_blank">
+        <button
           class="bg-primary hover:bg-primary/90 text-white text-sm font-bold px-5 py-2 rounded-lg transition-all"
         >
           Resume
-        </button></a
-      >
+        </button>
+      </a>
     </nav>
-    <button class="md:hidden p-2">
-      <span class="material-symbols-outlined">menu</span>
+
+    <!-- Hamburger Button -->
+    <button id="hamburger-btn" class="md:hidden p-2">
+      <span class="material-symbols-outlined text-3xl"> menu </span>
     </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden flex flex-col gap-4 px-6 pb-6 bg-background-light dark:bg-background-dark border-t border-white/10 "
+  >
+    <a href="#about" class="hover:text-primary mt-4">About</a>
+
+    <a href="#projects" class="hover:text-primary">Projects</a>
+
+    <a href="#skills" class="hover:text-primary">Skills</a>
+
+    <a href="#experience" class="hover:text-primary">Leadership</a>
+
+    <a href="#contact" class="hover:text-primary">Contact</a>
+
+    <a href="Yadnyesh_Resume.pdf" target="_blank" class="hover:text-primary">
+      Resume
+    </a>
   </div>
 </header>

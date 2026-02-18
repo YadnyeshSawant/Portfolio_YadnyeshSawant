@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -41,42 +42,6 @@
         },
       };
     </script>
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      .hero-pattern {
-        background-color: #101922;
-        background-image: radial-gradient(#258cf415 1px, transparent 1px);
-        background-size: 30px 30px;
-      }
-      .typewriter-cursor::after {
-        content: "|";
-        animation: blink 1s infinite;
-        margin-left: 5px;
-      }
-
-      @keyframes blink {
-        0%,
-        50%,
-        100% {
-          opacity: 1;
-        }
-        25%,
-        75% {
-          opacity: 0;
-        }
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      html,
-      body {
-        overflow-x: hidden;
-      }
-    </style>
   </head>
   <body
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300"
@@ -84,7 +49,6 @@
     <!-- Navigation -->
     <div id="navbar-container"></div>
     <main>
-      <!-- Hero Section -->
       <!-- Hero Section -->
       <section
         class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-pattern"
@@ -387,328 +351,111 @@
       </section>
       <!-- Skills Section -->
       <section
-        class="py-24 bg-background-light dark:bg-background-dark"
         id="skills"
+        class="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-background-light to-white dark:from-background-dark dark:to-slate-900"
       >
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="text-center mb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Heading -->
+          <div class="text-center mb-10 sm:mb-12 md:mb-16">
             <h2
-              class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+              class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-3 sm:mb-4"
             >
               Expertise
             </h2>
+
             <h3
-              class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white"
+              class="font-bold text-slate-900 dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
             >
-              My Tech Stack
+              Tech Stack
             </h3>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <!-- Skill Item -->
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 group-hover:text-primary"
-                  >coffee</span
-                >
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >Java</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                  >terminal</span
-                >
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >Python</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 group-hover:text-primary"
-                  >database</span
-                >
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >SQL</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                  >database</span
-                >
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >PostgreSQL</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                  >database</span
-                >
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >MySQL</span
-              >
+
+          <!-- Skills Grid -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5"
+          >
+            <!-- Skill -->
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">coffee</span>
+              <span class="skill-name">Java</span>
             </div>
 
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10"
-              >
-                <span class="material-symbols-outlined"> eco </span>
-              </div>
-              <span
-                class="font-bold text-center text-slate-900 dark:text-slate-200"
-                >Spring Tool Suite</span
-              >
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">settings</span>
+              <span class="skill-name">Spring Boot</span>
             </div>
 
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 group-hover:text-primary"
-                  >settings</span
-                >
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >Spring Boot</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 group-hover:text-primary"
-                  >storage</span
-                >
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >Hibernate ORM</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 group-hover:text-primary"
-                  >dns</span
-                >
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >Servlets & JSP</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10"
-              >
-                <span class="material-symbols-outlined"> commit </span>
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >Git</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 group-hover:text-primary"
-                  >code</span
-                >
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >GitHub</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                >
-                  widgets
-                </span>
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >Java AWT</span
-              >
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">storage</span>
+              <span class="skill-name">Hibernate ORM</span>
             </div>
 
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                >
-                  desktop_windows
-                </span>
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >Java Swing</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                >
-                  code
-                </span>
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >HTML</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                >
-                  palette
-                </span>
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >CSS</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span class="material-symbols-outlined"> palette </span>
-              </div>
-              <span
-                class="font-bold text-slate-900m text-center dark:text-slate-200"
-                >Tailwind CSS & Bootstrap</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                >
-                  terminal
-                </span>
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >VS Code</span
-              >
-            </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                >
-                  integration_instructions
-                </span>
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >IntelliJ IDEA</span
-              >
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">dns</span>
+              <span class="skill-name">Servlets & JSP</span>
             </div>
 
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10"
-              >
-                <span
-                  class="material-symbols-outlined text-slate-500 group-hover:text-primary"
-                  >psychology</span
-                >
-              </div>
-              <span
-                class="font-bold text-slate-900 dark:text-slate-200 text-center"
-                >Prompt Engineering</span
-              >
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">database</span>
+              <span class="skill-name">PostgreSQL</span>
             </div>
-            <div
-              class="flex flex-col items-center p-8 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-800/20 hover:border-primary transition-all group"
-            >
-              <div
-                class="size-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors"
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">database</span>
+              <span class="skill-name">MySQL</span>
+            </div>
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">code</span>
+              <span class="skill-name">HTML</span>
+            </div>
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">palette</span>
+              <span class="skill-name">CSS / Tailwind / Bootstrap</span>
+            </div>
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">commit</span>
+              <span class="skill-name">Git & GitHub</span>
+            </div>
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo"
+                >desktop_windows</span
               >
-                <span
-                  class="material-symbols-outlined text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors"
-                >
-                  api
-                </span>
-              </div>
-              <span class="font-bold text-slate-900 dark:text-slate-200"
-                >Postman API</span
+              <span class="skill-name">Java Swing</span>
+            </div>
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo"
+                >desktop_windows</span
               >
+              <span class="skill-name">AWT</span>
+            </div>
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">terminal</span>
+              <span class="skill-name">VS Code</span>
+            </div>
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo"
+                >integration_instructions</span
+              >
+              <span class="skill-name">IntelliJ IDEA</span>
+            </div>
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo"
+                >psychology</span
+              >
+              <span class="skill-name">Prompt Engineering</span>
+            </div>
+
+            <div class="skill-rect">
+              <span class="material-symbols-outlined skill-logo">api</span>
+              <span class="skill-name">Postman API</span>
             </div>
           </div>
         </div>
