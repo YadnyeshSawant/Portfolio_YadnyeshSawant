@@ -70,7 +70,7 @@ fetch("projects.json")
             </div>
 
             <div class="flex items-center gap-4">
-              <a href="lodingScreen.html"
+              <a href="projectDetails.html?id=${project.id}"
                  class="flex-1 bg-primary text-white text-center py-2 rounded-lg font-bold text-sm">
                  View Project
               </a>
@@ -174,3 +174,4 @@ function startTypewriter() {
 
 // start AFTER page fully loads
 window.addEventListener("load", startTypewriter);
+

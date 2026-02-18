@@ -50,84 +50,101 @@
     <div id="navbar-container"></div>
     <main>
       <!-- Hero Section -->
-      <section
-        class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-pattern"
+      <!-- Hero Section -->
+<section
+  class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-pattern"
+>
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full"
+  >
+
+    <!-- IMAGE (Mobile First, Laptop Right) -->
+    <div class="order-first lg:order-last w-full mb-8 lg:mb-0 relative">
+
+      <!-- Glow background -->
+      <div
+        class="absolute -top-10 -right-10 w-72 h-72 lg:w-96 lg:h-96 bg-primary/20 rounded-full blur-[100px]"
+      ></div>
+
+      <!-- Image container -->
+      <div
+        class="
+          relative z-10
+          w-full
+          lg:max-w-md
+          lg:mx-auto
+          rounded-2xl
+          border border-white/10
+          bg-slate-900/50
+          backdrop-blur-sm
+          p-2 sm:p-3 lg:p-4
+          shadow-2xl
+        "
       >
-        <div
-          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+        <img
+          src="profileImage.jpeg"
+          alt="Yadnyesh Sawant"
+          class="w-full h-auto object-cover rounded-lg opacity-95"
+        />
+      </div>
+
+    </div>
+
+    <!-- TEXT CONTENT -->
+    <div class="z-10 order-last lg:order-first">
+
+      <!-- Hello text -->
+      <h2 class="text-xl sm:text-2xl mb-2 text-slate-700 dark:text-slate-300">
+        Hello, I'm
+      </h2>
+
+      <!-- Typewriter Name -->
+      <h2
+        class="text-3xl sm:text-4xl md:text-5xl font-black mb-4 whitespace-nowrap text-slate-900 dark:text-white"
+      >
+        <span id="typewriter-name" class="typewriter-cursor"></span>
+      </h2>
+
+      <!-- Role -->
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight text-slate-900 dark:text-white mb-6"
+      >
+        Full-Stack
+        <span class="text-primary">Java Developer</span>
+      </h1>
+
+      <!-- Description -->
+      <p
+        class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-xl leading-relaxed text-justify"
+      >
+        I develop robust and efficient web applications using Java and modern
+        technologies, with a strong focus on clean architecture, performance,
+        and solving real-world problems.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap gap-4">
+
+        <a
+          href="#projects"
+          class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all shadow-lg shadow-primary/20"
         >
-          <!-- LEFT SIDE -->
-          <div class="z-10 text-center lg:text-left">
-            <!-- Greeting -->
-            <h2
-              class="text-lg sm:text-xl md:text-2xl mb-2 text-slate-600 dark:text-slate-400"
-            >
-              Hello, I'm
-            </h2>
+          View My Work
+        </a>
 
-            <!-- Name with Typewriter -->
-            <h2
-              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 break-words"
-            >
-              <span id="typewriter-name" class="typewriter-cursor"></span>
-            </h2>
+        <a
+          href="#contact"
+          class="inline-flex items-center justify-center bg-white/5 hover:bg-white/10 border border-slate-200 dark:border-white/10 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all"
+        >
+          Get in Touch
+        </a>
 
-            <!-- Role -->
-            <h1
-              class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight text-slate-900 dark:text-white mb-6"
-            >
-              Full-Stack <span class="text-primary">Java Developer</span>
-            </h1>
+      </div>
 
-            <!-- Description -->
-            <p
-              class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0"
-            >
-              I develop robust and efficient web applications using Java and
-              modern technologies, with a focus on clean architecture,
-              performance, and real-world problem solving.
-            </p>
+    </div>
 
-            <!-- Buttons -->
-            <div
-              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <a
-                href="#projects"
-                class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all shadow-lg shadow-primary/20"
-              >
-                View My Work
-              </a>
-
-              <a
-                href="#contact"
-                class="inline-flex items-center justify-center bg-white/5 hover:bg-white/10 border border-slate-200 dark:border-white/10 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all"
-              >
-                Get in Touch
-              </a>
-            </div>
-          </div>
-
-          <!-- RIGHT SIDE IMAGE -->
-          <div class="relative flex justify-center lg:justify-end">
-            <!-- Background glow -->
-            <div
-              class="absolute -top-10 -right-10 w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 bg-primary/20 rounded-full blur-[100px]"
-            ></div>
-
-            <!-- Profile image container -->
-            <div
-              class="relative z-10 rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-sm p-2 sm:p-3 lg:p-4 overflow-hidden shadow-2xl"
-            >
-              <img
-                src="profileImage.jpeg"
-                alt="Yadnyesh Sawant"
-                class="rounded-lg opacity-90 w-56 sm:w-64 md:w-80 lg:w-96 h-auto object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+  </div>
+</section>
       <!-- About Section -->
       <section
         class="py-24 bg-background-light dark:bg-background-dark"

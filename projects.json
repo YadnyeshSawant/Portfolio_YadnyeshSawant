@@ -4,19 +4,24 @@
     "title": "BOOK-n-JOY: Event Ticket Booking Platform",
     "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDfUWCyHnBHCF9744cmQM5qF4QTdRCj9-W0CeiCcGCjBLhXmVsXlgf9eilpJ9NWniQlcshMv0d_COWEsYVa4_SgptYb8IrBQ5nhke7UqSW6gjAeDjyQQzEPUKZZk1PlB-9z4w7-Tlf2kge-HHLEJ7Jf195BvctZ7FFOGGLJIorXow6iDKj9AmX2nPKfxISrydFuVoG8raP2eQ5y0SQXR6f0NHi-yumQ-EMEgUSXaQgq1VZlLRUHl9z09bD4dY2G4BQkT4s3k1I9qv5X",
     "technologies": [
+      "Linux",
       "Java",
       "Spring Boot",
+      "Maven",
+      "Tomcat",
       "PostgreSQL",
       "Bootstrap",
       "JavaScript",
       "Git"
+      
     ],
-    "description": "A full-stack event ticket booking platform that allows users to browse events, book tickets, and manage bookings with secure authentication and database integration.",
+    "description": "Event planning and ticket booking have become integral to modern entertainment and social gatherings. BookNJoy is a web-based event ticketing platform designed to streamline the process of event discovery, booking, and ticket management. The system provides users with a seamless interface to explore events based on categories, register for events, and generate digital tickets without requiring payment integration.The primary objective of BookNJoy is to bridge the gap between event organizers and attendees by offering a user-friendly and efficient ticketing solution. Users can create accounts, browse various event categories such as music concerts, workshops, and cultural programs, and secure their bookings instantly. Organizers, on the other hand, can list their events, manage bookings, and track audience engagement effortlessly.The platform is built using Java (Spring Boot) for backend, PostgreSQL for database management, and HTML, CSS, Tailwind(css), and JavaScript for the frontend, ensuring a robust, scalable, and interactive user experience. Additionally, BookNJoy focuses on enhancing accessibility by providing real-time event updates, easy event creation",
     "role": "Backend Developer",
     "timeline": "3 Months",
     "status": "Completed",
-    "liveDemo": "#",
-    "sourceCode": "https://github.com/theujwalthakare/aaomile"
+    "liveDemo": "",
+    "sourceCode": "https://github.com/theujwalthakare/aaomile",
+    "features": "User Authentication: Secure login and account management for both attendees and event organizers. Event Listing & Categorization: Events classified based on genre Music, Education, Sports, etc. Ticket Booking & Generation: Digital tickets with QR codes for easy entry validation. Event Management Dashboard: Organizers can create, edit, and delete events. Attendee Tracking: Organizers can manage attendees and track registrations. Event Notifications: Users receive event reminders and updates. Admin Panel: A centralized dashboard for monitoring events and users."
   },
   {
     "id": "python-executor",
@@ -55,5 +60,24 @@
     "status": "Completed",
     "liveDemo": "#",
     "sourceCode": "https://github.com/YadnyeshSawant/CodingTestApp"
+  },
+  {
+    "id": "Placement Portal",
+    "title": "Placement Portal: Student Job & Application Management System.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDex-OFspX5h26_2iT6qTNt4kXTYm9w5sKwd7tylM50M7b0EMOxnZQ1IQYwfIER-Z8YQfpZt6-Wtchnilvq76116pHJM6ehQGVBbkue6Hf2cNM4gvrUIZjcPu7v0eX4CbM9OoHawJqhLJD9-29uHCWhnVMbGtLg5EvtFU54ra3wOUjKEddxAJ93hpjsk6SyKtamSCboj7y6V7ZWIf1AmJU1sj8N-TuLHY85dY9pvOvuoPtzwfudaSZX4-n00xtZvNtE8FVntV_anFj5",
+    "technologies": [
+      "Java",
+      "Servelets",
+      "jsp",
+      "tailwindcss",
+      "Client-Server"
+    ],
+    "description": "A client-server based placement portal for managing job applications and student placements.",
+    "role": "Backend Developer",
+    "timeline": "2 Months",
+    "status": "Completed",
+    "liveDemo": "#",
+    "sourceCode": "https://github.com/YadnyeshSawant/CodingTestApp"
   }
+
 ]
