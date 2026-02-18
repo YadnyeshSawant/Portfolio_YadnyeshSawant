@@ -67,7 +67,15 @@
           opacity: 0;
         }
       }
-      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
     </style>
   </head>
   <body
@@ -77,29 +85,39 @@
     <div id="navbar-container"></div>
     <main>
       <!-- Hero Section -->
+      <!-- Hero Section -->
       <section
-        class="relative min-h-screen flex items-center pt-16 overflow-hidden hero-pattern"
+        class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-pattern"
       >
         <div
-          class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
         >
-          <div class="z-10">
-            <!-- Your Name -->
-            <h2 class="text-2xl md:text-2xl mb-2">Hello, I'm</h2>
-            <h2 class="text-4xl md:text-5xl font-black mb-4 whitespace-nowrap">
+          <!-- LEFT SIDE -->
+          <div class="z-10 text-center lg:text-left">
+            <!-- Greeting -->
+            <h2
+              class="text-lg sm:text-xl md:text-2xl mb-2 text-slate-600 dark:text-slate-400"
+            >
+              Hello, I'm
+            </h2>
+
+            <!-- Name with Typewriter -->
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 break-words"
+            >
               <span id="typewriter-name" class="typewriter-cursor"></span>
             </h2>
 
             <!-- Role -->
             <h1
-              class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-slate-900 dark:text-white mb-6"
+              class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight text-slate-900 dark:text-white mb-6"
             >
               Full-Stack <span class="text-primary">Java Developer</span>
             </h1>
 
             <!-- Description -->
             <p
-              class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-xl leading-relaxed text-justify"
+              class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0"
             >
               I develop robust and efficient web applications using Java and
               modern technologies, with a focus on clean architecture,
@@ -107,36 +125,40 @@
             </p>
 
             <!-- Buttons -->
-            <div class="flex flex-wrap gap-4">
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
               <a
-                class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-primary/20"
                 href="#projects"
+                class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all shadow-lg shadow-primary/20"
               >
                 View My Work
               </a>
 
               <a
-                class="inline-flex items-center justify-center bg-white/5 dark:bg-white/5 hover:bg-white/10 border border-slate-200 dark:border-white/10 px-8 py-4 rounded-xl font-bold text-lg transition-all"
                 href="#contact"
+                class="inline-flex items-center justify-center bg-white/5 hover:bg-white/10 border border-slate-200 dark:border-white/10 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all"
               >
                 Get in Touch
               </a>
             </div>
           </div>
 
-          <!-- Image -->
-          <div class="relative order-first lg:order-last mb-10 lg:mb-0">
+          <!-- RIGHT SIDE IMAGE -->
+          <div class="relative flex justify-center lg:justify-end">
+            <!-- Background glow -->
             <div
-              class="absolute -top-10 -right-10 w-72 h-72 lg:w-96 lg:h-96 bg-primary/20 rounded-full blur-[100px]"
+              class="absolute -top-10 -right-10 w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 bg-primary/20 rounded-full blur-[100px]"
             ></div>
 
+            <!-- Profile image container -->
             <div
-              class="relative z-10 rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-sm p-3 lg:p-4 overflow-hidden shadow-2xl max-w-xs sm:max-w-sm lg:max-w-md mx-auto"
+              class="relative z-10 rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-sm p-2 sm:p-3 lg:p-4 overflow-hidden shadow-2xl"
             >
               <img
-                alt="Yadnyesh Sawant"
-                class="rounded-lg opacity-90 w-full h-auto object-cover"
                 src="profileImage.jpeg"
+                alt="Yadnyesh Sawant"
+                class="rounded-lg opacity-90 w-56 sm:w-64 md:w-80 lg:w-96 h-auto object-cover"
               />
             </div>
           </div>
@@ -758,7 +780,9 @@
                   >
                     <span class="material-symbols-outlined"> commit </span>
                   </div>
-                  <a href="https://github.com/YadnyeshSawant">github.com/YadnyeshSawant</a>
+                  <a href="https://github.com/YadnyeshSawant"
+                    >github.com/YadnyeshSawant</a
+                  >
                 </div>
               </div>
             </div>
