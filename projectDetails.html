@@ -54,32 +54,11 @@
   >
     <!-- NAVBAR -->
 
-    <header
-      class="sticky top-0 z-50 border-b border-white/10 bg-background-dark/80 backdrop-blur-md"
-    >
-      <div
-        class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
-      >
-        <a href="index.html" class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-primary text-3xl">
-            code
-          </span>
-
-          <span class="font-bold text-xl"> Yadnyesh Sawant </span>
-        </a>
-
-        <a
-          href="index.html"
-          class="text-sm font-medium hover:text-primary transition-colors"
-        >
-          Back to Portfolio
-        </a>
-      </div>
-    </header>
+    <div id="navbar-container"></div>
 
     <!-- MAIN -->
 
-    <main class="max-w-7xl mx-auto px-6 py-10">
+    <main class="mt-10 max-w-7xl mx-auto px-6 py-10">
       <!-- HERO -->
 
       <section class="relative rounded-2xl overflow-hidden mb-8 md:mb-12 group">
@@ -141,8 +120,21 @@
             id="features"
             class="text-slate-400 text-base md:text-lg leading-relaxed text-left md:text-justify"
           ></p>
+          <!-- PROJECT SCREENSHOTS -->
+          <div id="project-gallery-section" class="mt-12 hidden">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary">
+                photo_library
+              </span>
+              Project Screenshots
+            </h2>
+  
+            <div
+              id="project-gallery"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            ></div>
+          </div>
         </div>
-
         <!-- RIGHT -->
 
         <aside class="lg:col-span-4 space-y-6">
@@ -215,8 +207,36 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const params = new URLSearchParams(window.location.search);
+        /* ---------- LOAD NAVBAR ---------- */
 
+        function loadNavbar() {
+          fetch("navbar.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("navbar-container").innerHTML = data;
+
+              const hamburger = document.getElementById("hamburger-btn");
+              const mobileMenu = document.getElementById("mobile-menu");
+
+              if (hamburger && mobileMenu) {
+                hamburger.addEventListener("click", () => {
+                  mobileMenu.classList.toggle("hidden");
+                });
+
+                document.querySelectorAll("#mobile-menu a").forEach((link) => {
+                  link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                  });
+                });
+              }
+            });
+        }
+
+        loadNavbar();
+
+        /* ---------- GET PROJECT ID ---------- */
+
+        const params = new URLSearchParams(window.location.search);
         const projectId = params.get("id");
 
         if (!projectId) {
@@ -226,9 +246,10 @@
           return;
         }
 
+        /* ---------- FETCH PROJECT DATA ---------- */
+
         fetch("projects.json")
           .then((res) => res.json())
-
           .then((projects) => {
             const project = projects.find((p) => p.id === projectId);
 
@@ -241,64 +262,51 @@
 
             /* ---------- BASIC INFO ---------- */
 
-            const image = document.getElementById("project-image");
-            if (image) image.src = project.image;
+            document.title = project.title + " | DevPortfolio";
 
-            const title = document.getElementById("project-title");
-            if (title) title.textContent = project.title;
+            document.getElementById("project-title").textContent =
+              project.title;
 
-            const heroDesc = document.getElementById("project-description");
-            if (heroDesc) heroDesc.textContent = project.description;
+            document.getElementById("project-image").src = project.image;
 
-            const description = document.getElementById(
-              "project-description-full",
-            );
-            if (description) description.textContent = project.description;
+            document.getElementById("project-description-full").textContent =
+              project.description;
 
-            const features = document.getElementById(
-              "features",
-            );
-            if (features) features.textContent = project.features;
+            document.getElementById("features").textContent = project.features;
 
+            document.getElementById("project-role").textContent = project.role;
 
-            const role = document.getElementById("project-role");
-            if (role) role.textContent = project.role;
-
-            const timeline = document.getElementById("project-timeline");
-            if (timeline) timeline.textContent = project.timeline;
+            document.getElementById("project-timeline").textContent =
+              project.timeline;
 
             /* ---------- STATUS ---------- */
 
             const statusSide = document.getElementById("project-status-side");
 
-            if (statusSide) {
-              statusSide.textContent = project.status;
+            statusSide.textContent = project.status;
 
-              if (project.status.toLowerCase() === "completed") {
-                statusSide.classList.add("text-green-400");
-              } else {
-                statusSide.classList.add("text-yellow-400");
-              }
+            if (project.status.toLowerCase() === "completed") {
+              statusSide.classList.add("text-green-400");
+            } else {
+              statusSide.classList.add("text-yellow-400");
             }
 
             /* ---------- TECH STACK ---------- */
 
             const techContainer = document.getElementById("project-tech-stack");
 
-            if (project.technologies && techContainer) {
-              techContainer.innerHTML = "";
+            techContainer.innerHTML = "";
 
-              project.technologies.forEach((tech) => {
-                const span = document.createElement("span");
+            project.technologies.forEach((tech) => {
+              const span = document.createElement("span");
 
-                span.className =
-                  "px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-slate-300";
+              span.className =
+                "px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium";
 
-                span.textContent = tech;
+              span.textContent = tech;
 
-                techContainer.appendChild(span);
-              });
-            }
+              techContainer.appendChild(span);
+            });
 
             /* ---------- LIVE DEMO BUTTON ---------- */
 
@@ -306,42 +314,77 @@
 
             const noDemoText = "No Live Demo Available for this project";
 
-            if (liveBtn) {
-              if (
-                !project.liveDemo ||
-                project.liveDemo.trim() === "" ||
-                project.liveDemo === "#" ||
-                project.liveDemo === noDemoText
-              ) {
-                liveBtn.removeAttribute("href");
+            if (
+              !project.liveDemo ||
+              project.liveDemo.trim() === "" ||
+              project.liveDemo === "#" ||
+              project.liveDemo === noDemoText
+            ) {
+              liveBtn.removeAttribute("href");
 
-                liveBtn.classList.add("opacity-50", "cursor-not-allowed");
+              liveBtn.classList.add("opacity-50", "cursor-not-allowed");
 
-                liveBtn.addEventListener("click", function (e) {
-                  e.preventDefault();
+              liveBtn.addEventListener("click", function (e) {
+                e.preventDefault();
 
-                  showToast(noDemoText);
-                });
-              } else {
-                liveBtn.href = project.liveDemo;
-
-                liveBtn.target = "_blank";
-              }
+                showToast(noDemoText);
+              });
+            } else {
+              liveBtn.href = project.liveDemo;
+              liveBtn.target = "_blank";
             }
 
             /* ---------- SOURCE CODE BUTTON ---------- */
 
             const sourceBtn = document.getElementById("source-code-btn");
 
-            if (sourceBtn && project.sourceCode) {
+            if (project.sourceCode) {
               sourceBtn.href = project.sourceCode;
-
               sourceBtn.target = "_blank";
             }
 
-            /* ---------- PAGE TITLE ---------- */
+            /* ---------- PROJECT SCREENSHOT GALLERY ---------- */
 
-            document.title = project.title + " | DevPortfolio";
+            if (project.projectImagesFolder) {
+              const gallerySection = document.getElementById(
+                "project-gallery-section",
+              );
+
+              const gallery = document.getElementById("project-gallery");
+
+              const folder = "images/" + project.projectImagesFolder + "/";
+
+              gallerySection.classList.remove("hidden");
+
+              for (let i = 1; i <= 20; i++) {
+                const img = new Image();
+
+                img.src = folder + i + ".jpeg";
+
+                img.className =
+                  "w-full h-full object-cover rounded-xl border border-white/10 hover:scale-105 transition cursor-pointer";
+
+                img.onload = function () {
+                  const div = document.createElement("div");
+
+                  div.className = "aspect-video overflow-hidden rounded-xl";
+
+                  div.appendChild(img);
+
+                  gallery.appendChild(div);
+                };
+
+                img.onclick = function () {
+                  const modal = document.getElementById("image-modal");
+
+                  const modalImg = document.getElementById("modal-image");
+
+                  modalImg.src = this.src;
+
+                  modal.classList.remove("hidden");
+                };
+              }
+            }
           })
 
           .catch((error) => {
@@ -357,8 +400,6 @@
       function showToast(message) {
         const toast = document.getElementById("toast");
 
-        if (!toast) return;
-
         toast.textContent = message;
 
         toast.classList.remove("opacity-0", "pointer-events-none");
@@ -371,8 +412,17 @@
           toast.classList.add("opacity-0", "pointer-events-none");
         }, 3000);
       }
-    </script>
 
+      /* ---------- IMAGE MODAL CLOSE ---------- */
+
+      document.addEventListener("click", function (e) {
+        const modal = document.getElementById("image-modal");
+
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    </script>
     <!-- TOAST -->
     <div
       id="toast"
